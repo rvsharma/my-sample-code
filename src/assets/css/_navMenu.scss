@@ -1,0 +1,483 @@
+#sidebar {
+  background-color: $marine-blue;
+  color: $white;
+  width: 260px;
+  height: auto !important;
+  left: 0;
+  overflow: auto;
+  .row {
+    margin: 0;
+  }
+  .navigation {
+    padding: 0;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  .img-logo-canopy-white {
+    object-fit: contain;
+  }
+}
+
+.app-menu-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: AvenirNext;
+  li {
+    padding: 6px 0 6px 20px;
+    margin-bottom: 3px;
+    font-family: SofiaProRegular;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    &.external-link {
+      &.first-external-link {
+        margin-top: 30px;
+      }
+      img {
+        width: initial;
+        height: initial;
+        position: relative;
+        left: 5px;
+      }
+      .nav-text {
+        margin-left: 30px;
+      }
+    }
+    a {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  img {
+    height: 21px;
+    width: 21px;
+    object-fit: contain;
+  }
+  img.deeplink {
+    height: 14px;
+    width: 21px;
+    object-fit: contain;
+  }
+  .nav-text {
+    position: relative;
+    top: 3px;
+    margin-left: 20px;
+  }
+  .nav-text-beta {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 0.9;
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+  }
+  a {
+    color: $white;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.info-menu-items {
+  margin: 0;
+  padding: 45px 0 0 0;
+  font: AvenirNext;
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    width: 232px;
+    height: 30px;
+    list-style: none;
+    color: white;
+    padding: 8px 0 8px 0;
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 1.43;
+    .square {
+      display: inline-block;
+      margin-right: 11px;
+      height: 30px;
+      width: 28px;
+    }
+    .selected {
+      background-color: $azure;
+    }
+  }
+  img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.no-profile-mobile {
+  height: 54px;
+  width: 54px;
+}
+
+.mobile-app-menu-items {
+  margin: 0;
+  margin-top: 39px;
+  padding: 0;
+  list-style: none;
+  .location {
+    padding-left: 56px;
+  }
+  font: AvenirNext;
+  li {
+    padding: 6px 0 6px 6px;
+    margin-bottom: 3px;
+    font-family: SofiaProRegular;
+    font-size: 13px;
+    font-weight: 500;
+    &.external-link {
+      &.first-external-link {
+        margin-top: 20px;
+      }
+      img {
+        width: initial;
+        height: initial;
+        position: relative;
+        left: 5px;
+      }
+      .nav-text {
+        margin-left: 30px;
+      }
+    }
+  }
+  img {
+    height: 21px;
+    width: 21px;
+    object-fit: contain;
+  }
+  img.deeplink {
+    height: 14px !important;
+    width: 21px !important;
+    object-fit: contain !important;
+  }
+  .nav-text {
+    position: relative;
+    top: 3px;
+    margin-left: 20px;
+  }
+  .nav-text-beta {
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 0.9;
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+  }
+  a {
+    color: $white !important;
+    margin-left: 0px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.mobile-header {
+  background: white;
+  font-family: SofiaProMedium;
+  padding-bottom: 5px;
+}
+
+.logged-in {
+  margin-top: 21px;
+}
+
+.img-logged-in {
+  float: left;
+  padding-top: 3px;
+}
+
+.mobile-button {
+  padding-top: 7px;
+  border-radius: 20px;
+}
+
+.mobile-name {
+  color: $marine-blue;
+  font-size: 16px;
+  padding-top: 7px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.btn-mobile-logout-trigger {
+  position: relative;
+  color: #fff;
+  background-color: $marine-blue;
+  border-color: $white;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 0;
+  width: 87px;
+  height: 26px;
+  border-radius: 20px;
+  left: 3px;
+  bottom: -6px;
+}
+
+.btn-mobile-logout {
+  color: $white;
+  background-color: $marine-blue;
+  border-color: $white;
+  border-radius: 20px;
+  padding: 0px 18px 3px 18px;
+  float: right;
+}
+
+.btn-mobile-logout-cancel {
+  position: relative;
+  left: 6px;
+  color: #fff;
+  background-color: $marine-blue;
+  border-color: $white;
+  border-radius: 20px;
+}
+
+.btn-mobile-logout:active {
+  color: $white;
+}
+
+.btn-mobile-logout:focus {
+  color: $white;
+}
+
+.mobile-button-double {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  button {
+    margin: 10px;
+  }
+}
+
+.img-logo-canopy-blue {
+  width: 130px;
+  height: 29px;
+}
+
+.mobile-header-logo-container {
+  line-height: 70px;
+  padding-left: 15px;
+  float: left;
+}
+
+.ic-menu-close {
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.non-logged-in-menu-items {
+  margin-top: 20px !important;
+}
+
+.mobile-header-close-btn-container {
+  float: right;
+  line-height: 77px;
+  padding-right: 8px;
+}
+
+.navbar-toggler {
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.mobile-menu-img {
+  width: 130px;
+}
+
+.double-check-mobile-message {
+  color: $marine-blue;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding-right: 34px;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+
+.logout-btn-container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.mobile-info-menu-items {
+  margin: 20px 0 0 0;
+  padding: 8px 0 8px 0;
+  font: AvenirNext;
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    list-style: none;
+    color: white;
+    padding: 2px 0 2px 0;
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 1.43;
+    .square {
+      display: inline-block;
+      margin-right: 11px;
+      height: 30px;
+      width: 28px;
+    }
+    .selected {
+      background-color: $azure;
+    }
+  }
+  img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+  }
+  a {
+    color: $white;
+    margin-left: 29px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.active {
+  background-color: $azure;
+}
+
+.close-btn-image {
+  position: relative;
+  top: -5px;
+  left: 200px;
+}
+
+// @media (max-width: 1024px) {
+//   #sidebar {
+//     display: none;
+//     width: 0;
+//   }
+// }
+
+ /* New Add */
+ @media (max-width: 992px) {
+  #sidebar {
+    display: none;
+    width: 0;
+  }
+  .d-lg-none-new.show {
+    display: block !important;
+  }
+}
+@media (min-width: 993px) {
+  .d-lg-none-new {
+    display: none;
+  }
+}
+/* New Add */
+
+@media (max-width: 399px) {
+  #mobile-menu-container {
+    width: 100%;
+  }
+}
+
+.regular-mobile-header {
+  display: block;
+  padding: 20px;
+  padding-bottom: 0;
+  position: relative;
+  .menu-header {
+    display: none;
+    @media (min-width: 481px) {
+      display: block;
+    }
+  }
+  .logos {
+    display: block;
+    margin-top: 5px;
+    > div {
+      padding: 13px 0;
+      border-bottom: 1px solid $light-grey-two;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    @media (min-width: 481px) {
+      display: none;
+    }
+  }
+  .close-and-logout {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    top: 20px;
+    right: 20px;
+    height: 107px;
+    .menu-close-button {
+      margin-right: -10px;
+    }
+  }
+}
+
+.mobile-double-check {
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    .menu-header {
+      margin-left: 20px;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.not-logged-in {
+  .menu-header {
+    display: none;
+    margin: 20px 0 0 20px;
+    @media (min-width: 481px) {
+      display: inline-block;
+    }
+  }
+  .mobile-header-logo-container {
+    display: block;
+    @media (min-width: 481px) {
+      display: none;
+    }
+  }
+}
+// @media (max-width: 1199px) {
+//   #sidebar {
+//     display: none;
+
+//     width: 0;
+//   }
+// }

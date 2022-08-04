@@ -1,0 +1,243 @@
+.modal {
+  .centered {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .modal-content {
+    box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    -webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    -o-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    -ms-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+  }
+  .modal-dialog-wider {
+    width: auto;
+
+    @media (min-width: 768px) {
+      width: 665px;
+    }
+  }
+  .modal-header {
+    background-color: $marine-blue;
+    padding: 0.65rem 1rem;
+    .modal-title {
+      color: $white;
+      font-family: SofiaProRegular;
+      font-size: 18px;
+    }
+    h4 {
+      font-size: 20px !important;
+      color: $white !important;
+      margin: 0 !important;
+    }
+    button {
+      background-color: transparent;
+      border-radius: 20px;
+      border: solid 1px $white;
+      color: $white;
+      font-family: AvenirNext;
+      font-size: 14px;
+      font-weight: normal;
+      height: 16px;
+      line-height: 1.43;
+      text-align: center;
+      width: 95px;
+      position: absolute;
+      top: 23px;
+      right: 25px;
+      @media (max-width: 768px) {
+        width: 70px;
+      }
+    }
+  }
+  .modal-body {
+    padding: 20px;
+    color: $greyish-brown;
+  }
+  .modal-footer {
+    justify-content: center;
+    button {
+      min-width: 120px;
+      height: auto;
+      padding: 7px 20px;
+      text-align: center;
+      line-height: 1.43;
+      font-family: AvenirNext;
+      font-size: 14px;
+      font-weight: normal;
+      border-radius: 20px;
+      border-color: #0f4397 #0f4397 #0e3f8e;
+      -webkit-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+      -moz-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+      -ms-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+      -o-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+      background: $marine-blue;
+      &.btn-cancel {
+        color: $white;
+        border: solid 1px $dusty-grey;
+        background-color: $dusty-grey;
+        margin-right: 5px;
+      }
+      &.light-blue-btn {
+        border-radius: 20px;
+        border: solid 1px $azure;
+        background: $azure;
+        color: $white;
+      }
+      &.btn-retry,
+      &.btn-confirm {
+        color: $white;
+        border: solid 1px $marine-blue;
+        background-color: $marine-blue;
+      }
+      &[disabled] {
+        color: $white;
+        background: $dusty-grey;
+        border: 1px solid $dusty-grey;
+      }
+      &.btn-secondary {
+        background-color: $varibale-btn-gray;
+        border: none;
+        // font-weight: 500;
+        color: $white;
+        font-family: SofiaProRegular;
+        -webkit-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        -moz-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        -ms-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        -o-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        &:focus {
+          -webkit-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+          -moz-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+          -ms-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+          -o-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        }
+        &:active {
+          -webkit-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+          -moz-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+          -ms-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+          -o-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        }
+      }
+      &:active {
+        -webkit-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        -moz-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        -ms-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+        -o-box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+      }
+    }
+  }
+}
+
+#pcpAddressModal {
+  .select-location {
+    font-size: 18px;
+    color: $marine-blue;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .pin {
+    // width: 20px;
+    // float: left;
+  }
+  .btn-select-address {
+    float: none;
+    border-radius: 20px;
+    border: solid 1px $azure;
+    background-color: transparent;
+    color: $azure;
+    float: right;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+    width: 70px;
+    @media (min-width: 768px) {
+      width: 120px;
+    }
+    @media (min-width: 900px) {
+      width: 120px;
+    }
+    @media (min-width: 1024px) {
+      width: 120px;
+    }
+    @media (min-width: 1200px) {
+      width: 120px;
+    }
+  }
+  .address-list {
+    // margin-left: -60px;
+    // margin-right: -20px;
+    li {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      border-top: 1px solid $light-grey-two;
+      // padding: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      flex-grow: 1;
+      :nth-child(2) {
+        padding-left: 10px;
+        flex-grow: 2;
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: initial;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-dialog {
+    max-width: 800px !important;
+    margin: 1.75rem auto;
+  }
+}
+
+.cal-wrp {
+  position: relative;
+  background-color: white;
+  margin-bottom: 16px;
+}
+.cal-wrp > .MuiFormControl-root {
+  width: 100%;
+  margin-top: 4px;
+}
+.cal-wrp > .MuiFormControl-root > .MuiOutlinedInput-root > .MuiInputAdornment-root > button {
+  margin-top: -3px;
+}
+.cal-wrp > .MuiFormControl-root > .MuiOutlinedInput-root > input {
+  padding: 7.5px 12px;
+  margin-top: -4px;
+}
+.cal-wrp > .MuiFormControl-root > .MuiOutlinedInput-root > fieldset {
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.23);
+}
+.cal-wrp > .MuiFormControl-root > .MuiOutlinedInput-root > fieldset > legend {
+  display: none;
+}
+.cal-wrp
+  > .MuiFormControl-root.form-control
+  > .MuiInput-underline
+  > .MuiInputAdornment-positionEnd {
+  right: 0;
+  top: 19px;
+  position: absolute;
+}
+.cal-wrp > .MuiFormControl-root.form-control > .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.87);
+}
+.cal-wrp > .MuiFormControl-root.form-control > .MuiInput-underline:hover:not(.Mui-disabled):after {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.87);
+}
+.cal-wrp > .MuiFormControl-root.form-control > .MuiInput-underline:after {
+  border-bottom: 0px solid #3f51b5;
+}

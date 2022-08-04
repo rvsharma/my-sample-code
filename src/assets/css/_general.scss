@@ -1,0 +1,1604 @@
+#canopy-dash-logged-in {
+  .content-section-no-padding {
+    padding-left: 0px;
+  }
+  .animate.ng-hide-remove,
+  .animate-inonly.ng-hide-remove,
+  .animate.ng-enter,
+  .animate-inonly.ng-enter {
+    -webkit-transition: opacity linear 0.7s;
+    -moz-transition: opacity linear 0.7s;
+    -ms-transition: opacity linear 0.7s;
+    -o-transition: opacity linear 0.7s;
+    transition: opacity linear 0.7s;
+    opacity: 0;
+  }
+  .animate.ng-hide-remove.ng-hide-remove-active,
+  .animate-inonly.ng-hide-remove.ng-hide-remove-active,
+  .animate.ng-enter.ng-enter-active,
+  .animate-inonly.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
+  .animate.ng-hide-add,
+  .animate.ng-leave {
+    -webkit-transition: opacity linear 0.3s;
+    -moz-transition: opacity linear 0.3s;
+    -ms-transition: opacity linear 0.3s;
+    -o-transition: opacity linear 0.3s;
+    transition: opacity linear 0.3s;
+    opacity: 1;
+  }
+  .animate.ng-hide-add.ng-hide-add-active,
+  .animate.ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+}
+
+.welcome-card {
+  flex: 0 0 577px;
+  border-radius: 4px 0px 0px 4px;
+  background-image: linear-gradient(
+    63deg,
+    #42c0eb,
+    #319ff5 15%,
+    #517df9 25%,
+    #6d60fc 37%,
+    #7e4dfe 46%,
+    #8447ff 53%,
+    #8748fb 60%,
+    #914aee 68%,
+    #a14dda 76%,
+    #b752bd 83%,
+    #d0579d 90%,
+    #e8669a
+  );
+  color: $white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  float: left;
+  position: relative;
+  h1 {
+    color: $white;
+    font-family: SofiaProRegular;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+  }
+  p {
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: left;
+    color: $white;
+  }
+  a: {
+    color: inherit;
+  }
+}
+
+.welcome-html-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  @media (max-width: 768px) {
+    position: revert;
+    transform: translate(0%, 0%);
+  }
+}
+
+//Prevents Outline (Dotted Lines) for All Focused Items - IE Fix
+*:focus {
+  outline: 0 !important;
+}
+
+.login-area {
+  display: flex;
+  min-height: 460px;
+}
+
+.login-container {
+  border-radius: 0px 4px 4px 0px;
+  flex: 1 1;
+  float: left;
+  min-height: 462px;
+  // height: 100%;
+  height: auto;
+  width: 416px;
+  padding: 29px 24px;
+  background-color: $white;
+  form.login-form {
+    .row {
+      h2 {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 10px;
+        text-align: center;
+        text-transform: none;
+        // font-weight: 700;
+        color: $signIn;
+      }
+    }
+
+    .username-form-label-text {
+      margin-bottom: 20px;
+      .username-form-label {
+        padding: 7px 10px 7px 0;
+        font-weight: 600;
+        color: $brownish-grey;
+        font-size: 13px;
+        line-height: 16px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .custom-addon-absolute {
+        position: absolute;
+        top: 30px;
+        right: 5px;
+        z-index: 4;
+      }
+      .signing {
+        color: $signing;
+        font-size: 12px;
+      }
+    }
+    .username-form-label-text-mb {
+      margin-bottom: 30px;
+      .row {
+        div {
+          a.signing {
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          a.forgot {
+            color: $azure;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'AvenirNextMedium';
+            &:hover {
+              color: $azure;
+              text-decoration: underline;
+              font-size: 16px;
+            }
+          }
+          ul.collapse {
+            padding-left: 0;
+            li {
+              margin-top: 12px;
+              list-style-type: none;
+              a {
+                text-decoration: none;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+        div {
+          .button-primary {
+            border-color: #0f4397 #0f4397 #0e3f8e;
+            box-shadow: 0 1px 0 rgb(0 0 0 / 15%), inset 0 1px 0 0 rgb(255 255 255 / 10%);
+            background: $marine-blue;
+            width: 176px;
+            height: 34px;
+            border-radius: 20px;
+            font-family: AvenirNext;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            // margin-top: 16px;
+            // float: right;
+            color: #fff;
+            &:disabled {
+              background: $greyish;
+              border-color: $greyish;
+            }
+          }
+        }
+      }
+    }
+  }
+  .login-header {
+    font-family: AvenirNext;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: $marine-blue;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+  .title {
+    width: 133px;
+    height: 17px;
+    font-family: AvenirNext !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.67 !important;
+    color: $brownish-grey;
+  }
+  .forgot-username {
+    cursor: pointer;
+    font-family: AvenirNext;
+    font-size: 14px;
+    text-align: left;
+    color: $marine-blue;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .forgot-password {
+    cursor: pointer;
+    font-family: AvenirNext;
+    font-size: 14px;
+    text-align: left;
+    color: $marine-blue;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: right !important;
+  }
+  .error-container {
+    height: 50px;
+    padding-left: 0px;
+  }
+  .btn-login {
+    width: 176px;
+    height: 34px;
+    border-radius: 20px;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background-color: $marine-blue;
+    float: right;
+    color: $white;
+  }
+  .error {
+    color: red;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+}
+
+.div-line {
+  height: 1px;
+  border-top: solid 1px $light-grey-two;
+  margin-top: 20px;
+}
+
+.member-signup-container {
+  border-radius: 4px;
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .row {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .btn-signup {
+    float: right;
+    cursor: pointer;
+    height: 34px;
+    border-radius: 20px;
+    background-color: $azure;
+    font-family: AvenirNext;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+    margin-top: 23px;
+    margin-right: -7px;
+  }
+}
+
+.member-signup-text {
+  font-family: SofiaProRegular;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  color: $marine-blue;
+  // float: left;
+  line-height: 60px;
+}
+
+.welcome-new-member-container {
+  position: relative;
+  border-radius: 4px;
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  padding: 20px;
+  margin-bottom: 20px;
+  .welcome-new-member {
+    font-family: SofiaPro;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: $marine-blue;
+  }
+  .welcome-text {
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: left;
+    color: $greyish-brown;
+  }
+  .delete-icon {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
+}
+
+.quick-tip-container {
+  font-family: SofiaPro;
+  font-size: 18px;
+  line-height: 1.11;
+  text-align: left;
+  color: $white;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: $purpley-pink;
+  padding: 20px !important;
+}
+
+.quick-tip-remote p:nth-child(1) {
+  font-family: SofiaPro;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: $white;
+  word-wrap: break-word;
+}
+
+.quick-tip-remote a:nth-child(3) div {
+  border-radius: 20px;
+  border: solid 1px $white;
+  width: 100%;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: $white;
+  padding: 5px;
+  text-decoration: none;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.quick-tips-link {
+  color: $white;
+  text-decoration: none;
+}
+
+.quick-tips-link:hover {
+  color: $white;
+  text-decoration: none;
+}
+
+.no-pad-lr {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.blog-post img {
+  width: 100%;
+}
+
+.blog-post {
+  .blog-item {
+    .carousel-inner {
+      .carousel-item.active {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.blog-post {
+  .blog-item {
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 10px;
+    .carousel-inner {
+      .carousel-item {
+        h2 {
+          font-family: SofiaPro !important;
+          font-size: 20px !important;
+          font-weight: bold !important;
+          text-align: left;
+          color: $marine-blue !important;
+          margin-top: 20px;
+          // margin-bottom: 20px;
+        }
+        p {
+          font-family: AvenirNext !important;
+          font-size: 14px !important;
+          line-height: 1.29 !important;
+          text-align: left !important;
+          color: $greyish-brown !important;
+          font-weight: normal;
+        }
+        a {
+          font-family: SofiaPro !important;
+          font-size: 20px !important;
+          font-weight: bold !important;
+          text-align: left !important;
+          color: $marine-blue !important;
+        }
+        .button.button-primary {
+          border-color: #0f4397 #0f4397 #0e3f8e;
+          box-shadow: 0 1px 0 rgb(0 0 0 / 15%), inset 0 1px 0 0 rgb(255 255 255 / 10%);
+          background: #003c71;
+          width: 176px;
+          height: 34px;
+          border-radius: 20px;
+          font-family: AvenirNext;
+          font-size: 14px;
+          font-weight: 700;
+          text-align: center;
+          color: $white;
+          @media (max-width: 992px) {
+            width: 98%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog-post > div > div > div:nth-child(2) {
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 10px;
+}
+
+.blog-post > div > div > div > div > h2 {
+  font-family: SofiaPro !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  color: $marine-blue !important;
+}
+
+.carousel {
+  background-color: $white;
+  border-left: solid 1px $light-grey-two;
+  border-right: solid 1px $light-grey-two;
+  border-bottom: solid 1px $light-grey-two;
+  //   height: 38px;
+  //   display: table-row;
+  border-radius: 0px 0px 4px 4px;
+  div {
+    // display: table-cell;
+  }
+  .carousel-btn-left {
+    cursor: pointer;
+  }
+  .carousel-btn-right {
+    cursor: pointer;
+  }
+  .carousel-center {
+    width: 100%;
+    padding-top: 8px;
+    text-align: center;
+  }
+  .circle-container {
+    padding-left: 2px;
+    padding-right: 2px;
+    display: inline-block;
+  }
+  .circle {
+    background-color: $light-grey-two;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.blog-post > div {
+  background-color: $white;
+  border-left: solid 1px $light-grey-two;
+  border-right: solid 1px $light-grey-two;
+  border-bottom: solid 1px $light-grey-two;
+}
+
+.btn[disabled],
+fieldset[disabled] .btn {
+  background: $greyish;
+  border-color: $greyish;
+}
+
+.login-msg {
+  font-family: SofiaProRegular;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: $bluey-purple;
+  padding-top: 12px;
+}
+
+.plan-headings {
+  font-family: SofiaPro;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: $marine-blue;
+}
+
+.collapse-card-header {
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  min-height: 60px;
+  padding-inline: 16px;
+}
+
+#dash-id-card-wrapper {
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 4px 0 0 $light-grey-two;
+  padding: 10px 15px 20px 15px;
+  margin-top: 20px;
+  .no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .last-updated {
+    color: $greyish-brown;
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-top: 13px;
+    &.short-logo {
+      margin-top: 4px;
+    }
+  }
+  .logo-section {
+    text-align: right;
+    .logo {
+      &.healthnet-plan {
+        height: 30px;
+        margin-bottom: 5px;
+        width: 141px;
+      }
+      &.unitedhealthcare-plan {
+        height: 52px;
+        width: 186px;
+      }
+      &.westernhealth-plan {
+        height: 52px;
+        margin-bottom: 5px;
+        width: 88px;
+      }
+    }
+  }
+  .id-card-details-member {
+    hr {
+      height: 2px;
+      border-top: solid 1px $light-grey-two;
+      margin: 0;
+    }
+    .card-category-header {
+      color: $marine-blue;
+      font-family: SofiaPro;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+      margin: 8px 0;
+    }
+    .card-item-section {
+      p {
+        padding-right: 10px;
+      }
+      .clearfix {
+        display: block;
+        &.mobile-only {
+          display: none;
+        }
+      }
+    }
+    .card-item {
+      margin-bottom: 16px;
+    }
+    .card-item-label {
+      color: $brownish-grey;
+      font-family: AvenirNext;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.67;
+    }
+    .card-item-value {
+      color: $marine-blue;
+      font-family: AvenirNext;
+      font-size: 14px;
+      line-height: 1.43;
+      min-height: 21px;
+    }
+  }
+  .sticker-section {
+    margin-bottom: 20px;
+    .sticker-logo {
+      height: 50px;
+      margin-right: 20px;
+    }
+  }
+  .disclaimer {
+    font-family: AvenirNext;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: left;
+    color: $greyish-brown;
+  }
+  .deep-link-text {
+    height: 19px;
+    font-family: SofiaPro;
+    font-size: 16px;
+    font-weight: 500;
+    color: $azure;
+  }
+  .last-updated-text {
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 2;
+    text-align: right;
+    color: $brownish-grey;
+    margin-top: 10px;
+    padding-right: 10px;
+    @media (min-width: 1300px) {
+      float: left;
+    }
+  }
+  .benefit-action-line {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    float: right;
+    @media (min-width: 768px) {
+      margin-top: 10px;
+    }
+  }
+  .btn-view-id-card {
+    float: none;
+    border-radius: 20px;
+    border: solid 1px $azure;
+    background-color: transparent;
+    color: $azure;
+    float: right;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    line-height: normal;
+    text-align: center;
+    width: 167px;
+    @media (min-width: 768px) {
+      width: 120px;
+    }
+    @media (min-width: 900px) {
+      width: 135px;
+    }
+    @media (min-width: 1024px) {
+      width: 120px;
+    }
+    @media (min-width: 1200px) {
+      width: 150px;
+    }
+  }
+  .busy-view-id-card {
+    color: $azure;
+    float: right;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    width: 167px;
+    @media (min-width: 768px) {
+      width: 120px;
+    }
+    @media (min-width: 900px) {
+      width: 135px;
+    }
+    @media (min-width: 1024px) {
+      width: 120px;
+    }
+    @media (min-width: 1200px) {
+      width: 150px;
+    }
+  }
+  .show-hide-control {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-bottom: 5px;
+    .show-hide-text {
+      color: $azure;
+      font-family: SofiaPro;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: left;
+    }
+  }
+}
+
+#dash-benefit-wrapper {
+  background-color: $azure;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 6px 0 $light-grey-two;
+  padding: 15px 20px 20px 15px;
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  hr {
+    border-top: solid 1px $white;
+    height: 2px;
+    margin: 0 0 15px 0;
+  }
+  .benefit-title {
+    color: $white;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    margin-bottom: 13px;
+  }
+  .benefit-category {
+    color: $white;
+    font-family: SofiaPro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 7px;
+  }
+  .benefit-line {
+    color: $white;
+    margin-bottom: 6px !important;
+    padding-left: 10px;
+    .benefit-service {
+      font-family: AvenirNext;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      white-space: nowrap;
+    }
+    .benefit-cost {
+      font-family: AvenirNext;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: normal;
+      text-align: right;
+    }
+  }
+  .benefit-section div.row:last-child {
+    margin-bottom: 11px !important;
+  }
+  .plan-footnote {
+    color: $white;
+    font-family: AvenirNext;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.blog-post-container {
+  .blog-post-header {
+    background-color: $marine-blue;
+    font-family: SofiaPro;
+    font-size: 18px;
+    line-height: 1.44;
+    text-align: center;
+    color: $white;
+    border-radius: 4px 4px 0px 0px;
+    margin-top: 20px;
+    padding: 7px;
+    border-top: 1px solid $light-grey-two;
+    border-right: 1px solid $light-grey-two;
+    border-left: 1px solid $light-grey-two;
+  }
+}
+
+.form-control-feedback {
+  top: 0px;
+  margin-right: 5px;
+}
+
+.form-control-hide-show {
+  top: 19px;
+  margin-right: 18px;
+}
+
+.form-control-hide-show-new {
+  top: 0px;
+  margin-right: 18px;
+}
+
+.active-circle {
+  background-color: $azure !important;
+}
+
+.btn-view-plan {
+  min-width: 150px;
+  padding: 0px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#main-container #content #dash-care-provider-wrapper .row,
+#main-container #content #dash-benefit-wrapper .row,
+#main-container #content #dash-contacts-wrapper .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.wrapped-height {
+  height: 140px;
+}
+
+.non-wrapped-height {
+  height: 111px;
+}
+
+#dash-care-provider-wrapper {
+  border-radius: 4px;
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  padding: 15px 0 10px 15px;
+  display: flow-root;
+  &.top-card {
+    margin-top: 0;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .avatar {
+    height: 47px;
+    width: 46.5px;
+    margin-left: 7px;
+    margin-right: 5px;
+  }
+  .header-label {
+    font-family: SofiaPro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: $marine-blue;
+  }
+  .provider-info-line {
+    padding-top: 5px;
+    @media (max-width: 300px) {
+      display: grid;
+    }
+    .provider-label {
+      font-family: AvenirNext;
+      font-size: 12px;
+      font-weight: 600;
+      color: $brownish-grey;
+    }
+    .provider-value {
+      font-family: AvenirNext;
+      font-size: 14px;
+      color: $marine-blue;
+      margin-top: 2px;
+      margin-right: 10px;
+      &.phone-us {
+        text-decoration: none;
+      }
+      &.phone-us:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#dash-contacts-wrapper {
+  border-radius: 4px;
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  margin-top: 20px;
+  padding: 24px 20px 14px 15px;
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .contact-title {
+    color: $marine-blue;
+    font-family: SofiaPro;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+  }
+  .contact-category {
+    color: $brownish-grey;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+  .contact-line {
+    margin-bottom: 6px !important;
+  }
+  .contact-type {
+    color: $greyish-brown;
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 1.43;
+    @media (min-width: 1024px) and (max-width: 1160px) {
+      width: 100%;
+    }
+  }
+  .contact-phone {
+    color: $greyish-brown;
+    font-family: AvenirNext;
+    font-size: 14px;
+    line-height: 1.43;
+    white-space: nowrap;
+    text-decoration: none;
+    &.member-contact:hover {
+      text-decoration: underline;
+    }
+    &.provider-contact:hover {
+      text-decoration: underline;
+    }
+    @media (min-width: 1024px) and (max-width: 1160px) {
+      width: 100%;
+      &.no-gutter-left {
+        padding-left: 15px !important;
+      }
+    }
+    @media (max-width: 1024px) {
+      &.no-gutter-left {
+        padding-left: 15px !important;
+      }
+    }
+  }
+}
+
+.dash-contacts-no-predecessor {
+  margin-bottom: 20px;
+}
+
+.accumulator-container {
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 25px 0 40px 0;
+  .accumulator-empty,
+  .accumulator-notapplicable {
+    .error-message {
+      color: $marine-blue;
+      font-family: SofiaPro;
+      font-size: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 20px;
+      .phone {
+        padding-top: 5px;
+        color: $marine-blue;
+        font-size: 14px;
+      }
+    }
+    .spend-type-title {
+      color: $marine-blue;
+      font-family: AvenirNext;
+      font-size: 16px;
+      line-height: normal;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  .title {
+    color: $marine-blue;
+    font-family: SofiaPro;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    padding-left: 15px;
+  }
+  .accumulator-widget {
+    .plan-type-section {
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+    .plan-type-title {
+      color: $brownish-grey;
+      font-family: SofiaPro;
+      font-size: 17px;
+      font-weight: bold;
+      line-height: normal;
+      margin-bottom: 22px;
+      padding-left: 20px;
+    }
+    .spend-type-title {
+      color: $marine-blue;
+      font-family: AvenirNext;
+      font-size: 16px;
+      line-height: normal;
+      text-align: center;
+    }
+    .error-message {
+      color: $marine-blue;
+      font-family: SofiaPro;
+      font-size: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 26px;
+      .phone {
+        padding-top: 5px;
+        color: $marine-blue;
+        font-size: 14px;
+      }
+    }
+    .total-bar-control {
+      margin-left: 36px;
+      margin-right: 36px;
+    }
+  }
+}
+
+#dash-pdf-error-modal {
+  .modal-content {
+    border-radius: 10px;
+    border-radius: 10px;
+    min-height: 0;
+  }
+  .modal-header {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding-bottom: 12px;
+    padding-top: 11px;
+    position: relative;
+    text-align: center;
+  }
+  .modal-title {
+    color: $white;
+    font-family: SofiaPro;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+  }
+  .modal-body {
+    color: $greyish-brown;
+    font-family: AvenirNext;
+    font-size: 14px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    min-height: 0;
+    padding: 24px 20px;
+    line-height: 1.43;
+  }
+  .modal-action-line {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 480px) {
+  #dash-care-provider-wrapper {
+    .no-gutter > [class*='col-'] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  #dash-benefit-wrapper {
+    .no-gutter-right {
+      padding-right: 0 !important;
+    }
+    .no-gutter-left {
+      padding-left: 0 !important;
+    }
+  }
+  #dash-contacts-wrapper {
+    .no-gutter-right {
+      padding-right: 0 !important;
+    }
+    .no-gutter-left {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+@media (min-width: 479px) {
+  .accumulator-container {
+    .has-divider {
+      border-left: 1px solid $mercury;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .accumulator-container {
+    .error-message {
+      max-width: 560px;
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 553px) {
+  .health-net-logo {
+    margin-left: -37px;
+    float: left;
+  }
+}
+
+@media (max-width: 479px) {
+  #canopy-dash-logged-in {
+    .col-tiny-6 {
+      width: 50%;
+      float: left;
+    }
+    .col-tiny-12 {
+      width: 100%;
+      float: none;
+    }
+    .home-section-text {
+      width: 100%;
+      text-align: center;
+      padding: 0px;
+    }
+    .btn-home-section {
+      width: 100%;
+      display: flex;
+      margin-top: 5px;
+    }
+    .plan-heading-main {
+      min-height: 83px;
+    }
+    .btn-view-plan {
+      margin: 0 auto;
+    }
+    .home-section-margin {
+      padding-left: 15px;
+    }
+    .btn-home-section {
+      padding: 0px;
+    }
+    .quick-tip-container {
+      margin-right: 0;
+    }
+    .blog-post-container {
+      padding-left: 0;
+      .blog-post-header {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  #dash-care-provider-wrapper {
+    .avatar {
+      margin-left: -8px;
+    }
+  }
+  #dash-id-card-wrapper {
+    .logo-section {
+      text-align: left;
+      .logo {
+        float: left;
+        margin-left: -10px;
+      }
+    }
+    .id-card-details-member {
+      .card-item-section {
+        .clearfix {
+          display: none;
+          &.mobile-only {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1158px) {
+  .welcome-card {
+    flex: 0 0 486px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .welcome-card {
+    flex: 0 0 577px;
+  }
+}
+
+@media (max-width: 900px) {
+  .welcome-card {
+    flex: 1 1;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-control-hide-show-new {
+    top: 0px;
+    margin-right: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-section-no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .welcome-new-member-container {
+    border-radius: 0px;
+    margin: 20px 0 20px 0;
+  }
+  .canopy-rounded-heading {
+    border-radius: 0px;
+    margin-top: 20px;
+  }
+  .canopy-card-container {
+    border-radius: 0px;
+  }
+  #dash-care-provider-wrapper {
+    border-radius: 0;
+  }
+  #dash-id-card-wrapper {
+    border-radius: 0;
+  }
+  #dash-benefit-wrapper {
+    border-radius: 0;
+  }
+  #dash-contacts-wrapper {
+    border-radius: 0;
+  }
+  .quick-tip {
+    width: 100% !important;
+    padding: 15px 0px;
+  }
+  .quick-tip-container {
+    border-radius: 0px;
+    padding: 20px !important;
+  }
+  .blog-post-container {
+    margin-left: 0 !important;
+    padding-left: 10px;
+    .blog-post-header {
+      border-radius: 0px !important;
+      margin-left: 0px !important;
+      margin-top: 0;
+    }
+  }
+  .carousel {
+    border-radius: 0px;
+  }
+  .welcome-card {
+    display: block;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .login-container {
+    display: block;
+    width: 100%;
+  }
+  .login-area {
+    display: block;
+  }
+  .login-container .btn-login {
+    width: 100%;
+  }
+  .accumulator-container {
+    border-radius: 0;
+    .deductible-section {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+#termsAndConditionsReconsentModal {
+  .modal-header {
+    text-align: center;
+  }
+  .terms-body {
+    font-size: 14px;
+  }
+  .terms-label {
+    font-family: AvenirNext;
+    font-size: 20px;
+    font-weight: bold;
+    color: $marine-blue;
+    padding-top: 24px;
+  }
+  .modal-body {
+    background-color: $white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .modal-content {
+    background-color: $white;
+  }
+  .dont-accept-button {
+    border: none;
+    color: $azure;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 180px;
+  }
+  .accept-button {
+    background-color: $azure;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    width: 180px;
+  }
+  .dont-accept-button-reconsider {
+    border: none;
+    color: $white;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: $azure;
+    width: 180px;
+  }
+  .accept-button-reconsider {
+    background-color: $marine-blue;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    margin-left: 25px;
+    width: 180px;
+  }
+  .modal-content-reject {
+    background-color: $white;
+    height: 228px;
+    min-height: 228px;
+    .modal-header {
+      text-align: center;
+    }
+    .modal-body {
+      background-color: $white;
+      padding-left: 20px;
+      padding-right: 20px;
+      min-height: 112px;
+      padding-top: 36px;
+      padding-bottom: 36px;
+      font-family: AvenirNext;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
+
+#empiFalseModal {
+  .modal-header {
+    text-align: center;
+  }
+  .modal-body {
+    background-color: $white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+  .modal-content {
+    background-color: $white;
+  }
+}
+
+#deeplinkModal {
+  border-radius: 4px;
+  .deeplink-title {
+    text-align: left;
+  }
+  .no-button {
+    background-color: $marine-blue;
+    color: $white;
+    width: 150px;
+    height: 26px;
+    border-radius: 20px;
+    font-weight: bold;
+    line-height: 14px;
+  }
+  .yes-button {
+    background-color: $dusty-grey;
+    color: $white;
+    width: 150px;
+    height: 26px;
+    border-radius: 20px;
+    font-weight: bold;
+    line-height: 14px;
+  }
+}
+
+#pokitDokFalseModal {
+  .modal-header {
+    text-align: center;
+  }
+  .modal-body {
+    background-color: $white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+  .modal-content {
+    background-color: $white;
+  }
+}
+
+#pcpAddressModal {
+  .select-location {
+    font-size: 19px;
+    color: $marine-blue;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .pin {
+    width: 20px;
+    float: left;
+  }
+  .btn-select-address {
+    float: none;
+    border-radius: 20px;
+    border: solid 1px $azure;
+    background-color: transparent;
+    color: $azure;
+    float: right;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+    width: 87px;
+    @media (min-width: 768px) {
+      width: 120px;
+    }
+    @media (min-width: 900px) {
+      width: 135px;
+    }
+    @media (min-width: 1024px) {
+      width: 120px;
+    }
+    @media (min-width: 1200px) {
+      width: 150px;
+    }
+  }
+  .address-list {
+    margin-left: -60px;
+    margin-right: -20px;
+    li {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      border-top: 1px solid $light-grey-two;
+      padding: 16px;
+      font-size: 18px;
+      flex-grow: 1;
+      :nth-child(2) {
+        padding-left: 10px;
+        flex-grow: 2;
+      }
+    }
+  }
+}
+
+.smartbanner {
+  top: auto;
+  bottom: 0;
+}
+
+#okta-signin-submit {
+  /* override Okta css */
+  line-height: 0 !important;
+}
+
+.alert-primary {
+  color: $signing;
+  background-color: $white;
+  border-color: $border;
+  margin-bottom: 15px;
+  .accerlationmark {
+    background-color: $exclamation-mark;
+    border-color: 1px solid $border;
+    i {
+      font-size: 14px;
+    }
+  }
+  div {
+    p {
+      margin-top: 12px;
+      font-family: AvenirNextMedium;
+      font-size: 13px;
+      margin-bottom: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+.accerlationmark-error {
+  padding-top: 6px;
+  .row {
+    div {
+      i {
+        color: $exclamation-mark;
+        font-size: 14px;
+        padding-top: 7px;
+      }
+    }
+    div {
+      p {
+        margin-top: 0px;
+        font-family: AvenirNext;
+        font-size: 14px;
+        margin-bottom: 0px;
+        line-height: 18px;
+        color: $error-text;
+        padding-top: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .member-signup-text {
+    line-height: 20px;
+    margin-top: 20px;
+  }
+  .btn-signup {
+    width: 100%;
+  }
+  .create-account-container {
+    padding-left: 0px;
+  }
+  .form-control-hide-show-new {
+    top: 0px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-card {
+    height: 410px;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn-signup {
+    margin-top: 9px;
+    margin-bottom: 20px;
+    margin-right: -7px;
+    margin-top: 10px;
+  }
+  .member-signup-text {
+    margin-top: 14px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1040px) {
+  .login-container {
+    padding: 29px 17px !important;
+  }
+}

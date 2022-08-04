@@ -1,0 +1,55 @@
+import React, { useEffect, useState } from 'react';
+
+export const LinksTableHeaders = ['col1', 'col2', 'col3', 'col4'];
+
+interface cellProps {
+  dataItem: any;
+  onEdit: any;
+  onDelete: any;
+}
+
+export function BrandingCell({ dataItem, onDelete, onEdit }: cellProps): React.ReactNode {
+  const wrapperRef: any = React.createRef();
+  const [showActions, setShowActions] = useState(false);
+
+  const handleClickOutside = (event: any): void => {
+    if (wrapperRef && !wrapperRef?.current?.contains(event?.target)) {
+      setShowActions(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  });
+
+  const { id } = dataItem;
+  return (
+    <td className='positon-relative' id={id} ref={wrapperRef}>
+      <button
+        className='fa-thin fa-angle-right for-btn-without-bg'
+        onClick={() => setShowActions(!showActions)}
+        onKeyPress={() => setShowActions(!showActions)}
+        tabIndex={0}
+        type='button'>
+        {' '}
+      </button>
+      {showActions && (
+        <div className='positon-absolute-table shadow' id={id}>
+          <button
+            type='button'
+            className='for-btn-without-bg text-start'
+            onClick={() => onEdit(dataItem)}>
+            Edit
+          </button>
+          <button
+            type='button'
+            className='for-btn-without-bg text-start'
+            onClick={() => onDelete(dataItem)}>
+            Delete
+          </button>
+        </div>
+      )}
+    </td>
+  );
+}

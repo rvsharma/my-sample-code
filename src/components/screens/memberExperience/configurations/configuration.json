@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "tag": "",
+  "parameters": {
+    "product": "",
+    "payor": "",
+    "plan": [],
+    "ipa": "",
+    "employer": [],
+    "isPreffective": true,
+    "isActive": true
+  },
+  "general": {
+    "grievancesAndAppeals": { "id": "" },
+    "privacyPolicy": { "id": "" },
+    "nondiscriminationNotice": { "id": "" },
+    "phoneNumber": { "id": "" },
+    "termscondition": { "id": "" }
+  },
+  "modules": [],
+  "branding": [],
+
+  "externalLinks": []
+}

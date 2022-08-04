@@ -1,0 +1,10 @@
+# TODO: This file should be removed or updated with correct credentials for CD pipeline
+
+; begin auth token
+//pkgs.dev.azure.com/MyCanopyHealth/MyCanopyHealth/_packaging/Shared_Feed/npm/registry/:username=MyCanopyHealth
+//pkgs.dev.azure.com/MyCanopyHealth/MyCanopyHealth/_packaging/Shared_Feed/npm/registry/:_password=ejJtbzZjeXkydGNtM3A2eWF1MnZyNWs3b3J3dmthZTRhdXNleW9tbWJlazdqdmQ3N2RjYQ==
+//pkgs.dev.azure.com/MyCanopyHealth/MyCanopyHealth/_packaging/Shared_Feed/npm/registry/:email=npm requires email to be set but doesn't use the value
+//pkgs.dev.azure.com/MyCanopyHealth/MyCanopyHealth/_packaging/Shared_Feed/npm/:username=MyCanopyHealth
+//pkgs.dev.azure.com/MyCanopyHealth/MyCanopyHealth/_packaging/Shared_Feed/npm/:_password=ejJtbzZjeXkydGNtM3A2eWF1MnZyNWs3b3J3dmthZTRhdXNleW9tbWJlazdqdmQ3N2RjYQ==
+//pkgs.dev.azure.com/MyCanopyHealth/MyCanopyHealth/_packaging/Shared_Feed/npm/:email=npm requires email to be set but doesn't use the value
+; end auth token

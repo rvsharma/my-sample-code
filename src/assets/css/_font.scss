@@ -1,0 +1,16 @@
+@import "mixim";
+
+
+@include font-face(SofiaPro, "../fonts/SofiaProRegular");
+@include font-face(SofiaPro, "../fonts/SofiaProBold", bold);
+@include font-face(SofiaProBold, "../fonts/SofiaProBold");
+@include font-face(SofiaProRegular, "../fonts/SofiaProRegular");
+@include font-face(SofiaProMedium, "../fonts/SofiaProMedium");
+@include font-face(SFDisplayRegular, "../fonts/SF-UI-Display-Regular");
+@include font-face(SFTextRegular, "../fonts/SF-UI-Text-Regular");
+@include font-face(AvenirNext, "../fonts/AvenirNext-Regular");
+@include font-face(AvenirNext, "../fonts/AvenirNext-Bold", bold);
+@include font-face(AvenirNextMedium, "../fonts/AvenirNext-Medium");
+@include font-face(AvenirNextBold, "../fonts/AvenirNext-Bold");
+// @include font-face(AvenirNextDemiBold, "../fonts/Avenir-Next-LT-Pro-Demi");
+

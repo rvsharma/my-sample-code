@@ -1,0 +1,413 @@
+@import 'global';
+@import 'header';
+
+@import 'varibale';
+@import '../css/navMenu';
+
+@import 'general';
+@import '../../components/accounts/login/login.scss';
+
+@import 'Footer.scss';
+@import 'font';
+
+@import 'modal';
+@import '../css/font';
+@import 'Admin';
+@import 'collapse';
+
+#highlight-line {
+  display: flex;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: auto auto;
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(
+    to right,
+    $dark-sky-blue,
+    $electric-purple 18%,
+    $bluey-purple 54%,
+    $purplish-pink 86%,
+    $medium-pink
+  );
+}
+
+#main-container {
+  display: flex;
+  top: 4px;
+  right: 0;
+  left: 0;
+  position: relative;
+  margin: auto auto;
+  height: calc(100vh - 4px); // subtract height of highlight line at the top
+  width: 100%;
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: $light-grey-three; // width: calc(100% - 260px);
+    height: calc(100vh - 4px);
+    .scrolling-content {
+      background-color: $light-grey-three;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow-y: auto;
+    }
+    .row {
+      margin: 0;
+      &.footer-info {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+    }
+  }
+  #view {
+    background-color: $light-grey-three;
+    padding: 20px 20px 0 20px;
+    min-height: calc(100vh - 59px);
+    &.isLoggedIn {
+      min-height: calc(100vh - 138px);
+    }
+  }
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+a {
+  color: $anchor-focus-hover;
+  text-decoration: none;
+  &:focus {
+    color: $anchor-focus-hover;
+  }
+  &:hover {
+    color: $anchor-focus-hover;
+    text-decoration: underline;
+  }
+}
+.form-group {
+  margin-bottom: 15px;
+}
+dt,
+label {
+  font-weight: 700;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-check:active + .btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.light-blue-btn,
+.light-blue-btn:hover,
+.light-blue-btn:active,
+.light-blue-btn:focus {
+  height: 31px;
+  border-radius: 20px;
+  border: solid 1px $azure;
+  background: $azure;
+  color: $white;
+  line-height: 19px;
+}
+
+.grey-btn,
+.grey-btn:hover,
+.grey-btn:active,
+.grey-btn:focus {
+  height: 31px;
+  border-radius: 20px;
+  border: solid 1px $white;
+  background: $greyish;
+  line-height: 10px;
+}
+
+.dark-blue-btn,
+.dark-blue-btn:hover,
+.dark-blue-btn:active,
+.dark-blue-btn:focus {
+  height: 31px;
+  border-radius: 20px;
+  border: solid 1px $marine-blue;
+  background: $marine-blue;
+  color: $white;
+  line-height: 10px;
+}
+
+.notification-badge {
+  background: $warm-pink;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.6em;
+  margin-right: 15px;
+  float: right;
+  padding-top: 0.15em;
+  padding-right: 0.07em;
+}
+
+.long-badge {
+  width: 2.3em;
+}
+
+.mobile-badge {
+  margin-right: 30px;
+}
+
+body.modal-open {
+  position: fixed;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn-outline {
+  border-radius: 20px;
+  border: solid 1px $azure;
+  background-color: transparent;
+  color: $azure;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: bold;
+  height: 26px;
+  line-height: normal;
+  text-align: center;
+  padding: 0 60px;
+  margin-left: 10px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-columns {
+  flex-direction: column;
+}
+
+.flex-item-stretch {
+  flex: 1;
+}
+
+.space-between {
+  display: flex;
+  @media (max-width: 359px) {
+    display: grid;
+  }
+  justify-content: space-between;
+}
+
+.center-x {
+  display: flex;
+  justify-content: center;
+}
+
+.center-xy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* super narrow breakpoint not included in Bootstrap. Solves column overlap at very small screensizes */
+
+@media (max-width: 480px) {
+  .col-xxs-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  #main-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1299px) {
+  #main-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #main-container {
+    #view {
+      min-height: calc(100vh - 140px);
+      & #myTabContent {
+        padding-top: 20px;
+      }
+    }
+  }
+  #content {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1023.98px) and (orientation: portrait) {
+  #main-container {
+    #view {
+      min-height: calc(100vh - 120px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #view {
+    padding-top: 0;
+    min-height: calc(100vh - 140px);
+  }
+}
+
+@media (min-width: 768px) {
+  #main-container {
+    #view {
+      padding-left: 20px;
+    }
+  }
+}
+
+// Making sure body is rendered as expected when a modal is displayed.
+body.modal-open {
+  position: relative !important;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.clickable {
+  cursor: pointer !important;
+}
+
+.deep-link-container {
+  border: 1px solid $azure;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  + .header-card {
+    margin-top: 0;
+  }
+  .deep-link-title {
+    height: 19px;
+    font-family: AvenirNext;
+    font-size: 16px;
+    font-weight: 500;
+    color: $azure;
+    margin-bottom: 15px;
+  }
+  img {
+    position: relative;
+    top: -10px;
+    left: 10px;
+  }
+  p {
+    font-size: 13px;
+    margin-top: -10px !important;
+    margin-bottom: 0;
+  }
+}
+
+.white-panel {
+  border-radius: 4px;
+  background-color: $white;
+  border: solid 1px $light-grey-two;
+  padding: 15px 0 10px 0px;
+  margin-bottom: 20px;
+  overflow: auto;
+  @media (min-width: 768px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media (min-width: 1024px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.form-control[disabled] {
+  color: #a7a7a7;
+}
+
+#video-visit-parent-container {
+  height: calc(100vh - 175px);
+}
+
+select.form-control {
+  height: 34px;
+  font-size: 14px;
+}
+
+/*Ravi*/
+.rounded-left {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.rounded-right {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.reset-pass-container {
+  padding-top: 20px;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-1 {
+  margin-top: ($spacer * 0.25) !important;
+}
+.mt-2 {
+  margin-top: ($spacer * 0.5) !important;
+}
+.mt-3 {
+  margin-top: $spacer !important;
+}
+.mt-3 {
+  margin-top: ($spacer * 1.5) !important;
+}
+
+.ml-3 {
+  margin-left: ($spacer * 1.5) !important;
+}
+.ag-root-wrapper-body.ag-layout-normal {
+  height: 100% !important;
+}
+
+.table-bg .table td:not(:last-child),
+.table-bg .table th:not(:last-child) {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+select,
+option {
+  font: -moz-pull-down-menu !important;
+}
