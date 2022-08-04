@@ -1,8 +1,0 @@
-/node_modules
-/dist
-.dockerignore
-.git
-.gitignore
-.cache
-Dockerfile
-README.md
